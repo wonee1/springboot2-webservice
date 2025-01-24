@@ -15,7 +15,6 @@ build/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-.idea
 
 ### Eclipse ###
 .apt_generated
@@ -40,4 +39,15 @@ bin/
 .vscode/
 
 ### Mac OS ###
-.DS_Store
+.DS_Store### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+.gradle
+build.gradle
+build
+application-oauth.properties
