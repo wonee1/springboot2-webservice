@@ -53,6 +53,12 @@ kotlin {
     jvmToolchain(11)
 }
 
+plugins {
+    id 'org.springframework.boot' version '3.0.0'
+    id 'io.spring.dependency-management' version '1.1.0'
+    id 'java'
+}
+
 // JAR 파일의 MANIFEST.MF에 Main-Class 설정 추가
 bootJar {
     archiveBaseName = 'springboot2-webservice'  // JAR 파일 이름 지정
