@@ -52,6 +52,18 @@ kotlin {
 }
 
 
+// JAR 파일의 MANIFEST.MF에 Main-Class 설정 추가
+bootJar {
+    archiveBaseName = 'springboot2-webservice'  // JAR 파일 이름 지정
+    version = '1.0-SNAPSHOT'
+    manifest {
+        attributes(
+                'Main-Class': 'com.jojoldu.book.springboot.Application'  // ✅ 진입점 경로 수정
+        )
+    }
+}
+
+
 tasks.named('bootJar') {
     enabled = true
 }
