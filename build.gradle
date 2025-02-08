@@ -52,3 +52,18 @@ tasks.withType(JavaCompile) {
 kotlin {
     jvmToolchain(11)
 }
+
+// JAR 파일의 MANIFEST.MF에 Main-Class 설정 추가
+bootJar {
+    archiveBaseName = 'springboot2-webservice'  // JAR 파일 이름 지정
+    version = '1.0-SNAPSHOT'
+    manifest {
+        attributes(
+                'Main-Class': 'com.jojoIdu.book.springboot.Application'  // 진입점 설정
+        )
+    }
+}
+
+jar {
+    enabled = false // plain-jar 작업 비활성화
+}
