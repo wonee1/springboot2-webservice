@@ -65,6 +65,10 @@ bootJar {
 }
 
 
-jar {
-    enabled = false // plain-jar 작업 비활성화
+tasks.named('bootJar') {
+    enabled = true
+}
+
+tasks.named('jar') {
+    enabled = false
 }
